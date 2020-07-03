@@ -1,0 +1,25 @@
+<main>
+    <!--nav bar-->
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link" id="today-tab" data-toggle="tab" [routerLink]="['./today']"  role="tab" aria-controls="today" aria-selected="true">Today</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="thisweek-tab" data-toggle="tab" [routerLink]="['./this-week']"  role="tab" aria-controls="direction" aria-selected="false">This Week</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="setting-tab" data-toggle="tab" [routerLink]="['./setting']"  role="tab" aria-controls="account" aria-selected="false">Setting</a>
+        </li>
+        <li class="nav-item">
+            <button (click)="signOut()" class="btn btn-warning btn-sm signno"><b>Sign Out</b></button>
+        </li>    
+    </ul>
+
+    <!--nav content-->
+    <div class="tab-content" id="myTabContent">
+        <div *ngIf="!isPeriodAll" class="alert alert-danger" role="alert">
+            Please put your building info in <b ><a style="color:black;" [routerLink]="['./setting']" >Setting</a></b> tab
+        </div>
+        <router-outlet></router-outlet>
+    </div>
+</main>

@@ -1,0 +1,66 @@
+/* You can add global styles to this file, and also import other style files */
+:root{
+    --primary: #3eacba;
+    --success: #27803a;
+    --warning: #eab63d;
+}
+* {
+    font-family: "proxima-nova", sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+a {
+    color:var(--primary);
+}
+
+.btn-primary {
+    background-color:var(--primary);
+    border-color:var(--primary);
+}
+.btn-primary:hover {
+    background-color:var(--primary);
+    border-color:var(--primary);
+}
+.btn-warning {
+    color: #fff;
+    background-color:var(--warning);
+    border-color:var(--warning);
+}
+.btn-warning:hover {
+    color: #fff;
+    background-color:var(--warning);
+    border-color:var(--warning);
+}
+.btn-outline-primary {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-outline-primary:focus, .btn-outline-primary.focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+.btn-outline-primary.disabled, .btn-outline-primary:disabled {
+  color: var(--primary);
+  background-color: transparent;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active,
+.show > .btn-outline-primary.dropdown-toggle {
+  color: #fff;
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+img[alt="www.000webhost.com"] {
+    display: none;
+}
+.guideImg{
+  box-shadow: 0 10px 12px 5px rgb(0,0,0, 0.5);
+  width:350px;
+}

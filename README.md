@@ -1,5 +1,2 @@
-# Seeyourschedule.com
-#second version of SM Lunch Website
-#https://seeyourschedule.com
 # seeyourschedule.com2020-2021
-# seeyourschedule.com2020-2021
+code by Robin Gan, Alex Lynd, Yuhan Chen
