@@ -5,7 +5,7 @@
         <a [routerLink]="['/login&signup']">
             <span class="badge badge-info check">Click HERE</span> <span class="badge badge-info check">Create a free account for more features :)</span>
         </a>
-        <div class="input-group mb-3" style="margin-bottom:0!important; margin-top:10px;">
+        <div *ngIf="isShowTimeBar" class="input-group mb-3" style="margin-bottom:0!important; margin-top:10px;">
             <div class="input-group-prepend" style='margin: 0 auto;'>
                 <label class="input-group-text" for="inputGroupSelect01">Start with
                     <div *ngIf="isDone" class="spinner-border" style="width: 1rem; height: 1rem;" role="status">

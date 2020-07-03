@@ -15,11 +15,12 @@ export class QuickCheckComponent implements OnInit {
     private dataTransfer: DataTransferService) { }
 
   private luncper = {
-    startPeriod:'DAY OFF!!',
-    startTime:'DAY OFF!!',
-    type:'DAY OFF!!'
+    startPeriod:'',
+    startTime:'',
+    type:'DAY OFF'
   };
   private isDone = false
+  private isShowTimeBar;
   private lunchOfDay
   private todaytimes
   private date
@@ -121,28 +122,35 @@ export class QuickCheckComponent implements OnInit {
 
       if (this.todayblock == undefined || this.todayblock == 'Off') {
         this.luncper = {
-          startPeriod: 'DAY OFF!!',
-          startTime: 'DAY OFF!!',
-          type: 'DAY OFF!!'
+          startPeriod: '',
+          startTime: '',
+          type: 'DAY OFF'
         };
+        this.isShowTimeBar = false;
       } else {
         let type = this.todayblock.substring(0, this.todayblock.length - 1);
         let timeLL = data.sche[type];
         let period = this.todayblock[this.todayblock.length-1];
+        let periodCopy = period;
         let start = '8:00';
         let firstClass = Object.keys(timeLL)[0];
 
+        
         if (firstClass == 'Meeting') {
           start = '9:00';
+          if (Object.keys(timeLL)[1].includes('Block')) {
+            period = 'period ' + period;
+          } else {
+            period = Object.keys(timeLL)[1];
+          }
         } else {
-          let fff = timeLL[firstClass];
-
           if (firstClass.includes('Block')) {
             period = 'period ' + period;
           } else {
             period = firstClass;
           }
 
+          let fff = timeLL[firstClass];
           start = fff.split('-')[0];
         }
 
@@ -154,9 +162,9 @@ export class QuickCheckComponent implements OnInit {
         this.luncper = {
           startPeriod: period,
           startTime: start,
-          type: type
+          type: type + periodCopy
         };
-
+        this.isShowTimeBar = true;
       }
     //});
     } catch {

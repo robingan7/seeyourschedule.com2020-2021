@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<a class=\"navbar-brand logo\" href=\"https://github.com/robingan7/seeyourschedule.com\">\n  <img src=\"https://seeyourschedule.com/seal.svg\" width=\"40\" height=\"40\"\n    class=\"d-inline-block align-top\" alt=\"\">\n  <p>SYS</p>\n</a>\n<button class=\"btn btn-outline-secondary drr\" aria-expanded=\"false\" (click)=\"switch($event)\">Current</button>\n\n<div id=\"currentTimes\">\n  <h1 id=\"clock\">{{clock}}</h1>\n  <h4 id=\"date\">{{date}}</h4>\n  <h4 style=\"display:none\" id=\"monnum\">{{monnum}}</h4>\n</div>\n\n<div *ngIf=\"isManual\">\n  <div class=\"input-group mb-3 clll\">\n    <input type=\"text\" class=\"form-control cllin\" aria-label=\"Dollar amount (with dot and two decimal places)\">\n    <span class=\"input-group-text cllin\"><b>:</b></span>\n\n    <input type=\"text\" class=\"form-control cllin\" aria-label=\"Dollar amount (with dot and two decimal places)\">\n    <span class=\"input-group-text cllin\"><b>:</b></span>\n    <input type=\"text\" class=\"form-control cllin\" aria-label=\"Dollar amount (with dot and two decimal places)\">\n\n  </div>\n\n  <div *ngIf=\"load\" class=\"spinner-border text-dark appLoaderTop\" role=\"status\" style=\"width:10px; height:10px;\">\n    <span class=\"sr-only\">Loading...</span>\n  </div>\n  <div *ngIf=\"!load\"class=\"input-group mb-3 ccc\">\n    <select (change)=\"changeData()\" value={{displayNom}} class=\"custom-select de2\" id=\"manual_date\">\n      <option>Dates</option>\n      <option *ngFor=\"let date of datelist\">{{date}}</option>\n    </select>\n  </div>\n</div>\n\n\n<!--\n<agm-map [latitude]=\"lat\" [longitude]=\"lng\">\n  <agm-marker [latitude]=\"lat\" [longitude]=\"lng\"></agm-marker>\n</agm-map>-->\n\n<router-outlet></router-outlet>\n"
+module.exports = "<a class=\"navbar-brand logo\" href=\"https://github.com/robingan7/seeyourschedule.com\">\n  <img src=\"https://seeyourschedule.com/seal.svg\" width=\"40\" height=\"40\"\n    class=\"d-inline-block align-top\" alt=\"\">\n  <p>SYS</p>\n</a>\n<button class=\"btn btn-outline-secondary drr\" aria-expanded=\"false\" (click)=\"switch($event)\">Current</button>\n\n<div id=\"currentTimes\">\n  <h1 id=\"clock\">{{clock}}</h1>\n  <h4 id=\"date\">{{date}}</h4>\n  <h4 style=\"display:none\" id=\"monnum\">{{monnum}}</h4>\n</div>\n\n<div *ngIf=\"isManual\">\n  <div class=\"input-group mb-3 clll\">\n    <input type=\"text\" class=\"form-control cllin\" aria-label=\"Dollar amount (with dot and two decimal places)\">\n    <span class=\"input-group-text cllin\"><b>:</b></span>\n\n    <input type=\"text\" class=\"form-control cllin\" aria-label=\"Dollar amount (with dot and two decimal places)\">\n    <span class=\"input-group-text cllin\"><b>:</b></span>\n    <input type=\"text\" class=\"form-control cllin\" aria-label=\"Dollar amount (with dot and two decimal places)\">\n\n  </div>\n\n  <div *ngIf=\"load\" class=\"spinner-border text-dark appLoaderTop\" role=\"status\" style=\"width:10px; height:10px;\">\n    <span class=\"sr-only\">Loading...</span>\n  </div>\n  <div *ngIf=\"!load\"class=\"input-group mb-3 ccc\">\n    <select (change)=\"changeData()\" value={{displayNom}} class=\"custom-select de2\" id=\"manual_date\">\n      <option selected>Dates</option>\n      <option *ngFor=\"let date of datelist\">{{date}}</option>\n    </select>\n  </div>\n</div>\n\n\n<!--\n<agm-map [latitude]=\"lat\" [longitude]=\"lng\">\n  <agm-marker [latitude]=\"lat\" [longitude]=\"lng\"></agm-marker>\n</agm-map>-->\n\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -63,7 +63,7 @@ module.exports = "<div class=\"tab-pane fade show active\" id=\"loginAndSignUp\"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"tab-content\" class=\"quick-check-body\">\n    <div class=\"tab-pane fade show active width320\" id=\"Search-home\" role=\"tabpanel\" aria-labelledby=\"pills-home-tab\">\n        <span class=\"badge badge-success\" style=\"font-size: 20px;\">Quick Check</span>\n        <br>\n        <a [routerLink]=\"['/login&signup']\">\n            <span class=\"badge badge-info check\">Click HERE</span> <span class=\"badge badge-info check\">Create a free account for more features :)</span>\n        </a>\n        <div class=\"input-group mb-3\" style=\"margin-bottom:0!important; margin-top:10px;\">\n            <div class=\"input-group-prepend\">\n                <label class=\"input-group-text\" for=\"inputGroupSelect01\">Peroid\n                    <div *ngIf=\"isDone\" class=\"spinner-border\" style=\"width: 1rem; height: 1rem;\" role=\"status\">\n                        <span class=\"sr-only\">Loading...</span>\n                    </div>\n                    <b>-{{luncper}}-</b> building</label>\n            </div>\n            <select (change)=\"isFirstLunch($event)\" value={{room}} class=\"custom-select op\" id=\"inputGrojjupSelect01\">\n                <option value=\"\">Options</option>\n                <option value=\"B\">B</option>\n                <option value=\"Talon\">Talon</option>\n                <option value=\"C\">C</option>\n                <option value=\"S\">S</option>\n                <option value=\"G115\">G115</option>\n                <option value=\"G116\">G116</option>\n                <option value=\"G117\">G117</option>\n                <option value=\"A\">A</option>\n                <option value=\"T\">T</option>\n                <option value=\"R\">R</option>\n                <option value=\"G\">G</option>\n                <option value=\"GYM\">GYM</option>\n                <option value=\"Library\">Library</option>\n            </select>\n        </div>\n        <div class=\"toast\" role=\"alert\" aria-live=\"polite\" aria-atomic=\"true\" data-autohide=\"true\">\n            <div class=\"toast-header\">\n                <img src=\"https://seeyourschedule.com/logoo_5805.png\" width=\"40\" height=\"40\" class=\"rounded mr-2\"\n                    alt=\"...\">\n                <strong class=\"mr-auto\">You have <b style=\"color:black;\">{{lunchOfDay}}</b></strong>\n                <small></small>\n                <button type=\"button\" class=\"ml-2 mb-1 close\" data-dismiss=\"toast\" aria-label=\"Close\">\n                    <span aria-hidden=\"true\">;)</span>\n                </button>\n            </div>\n            <div class=\"toast-body\">\n                Hello, friend! FROM <a style=\"text-decoration: underline;\"\n                    href=\"https://www.smhs.org/academics/departments-and-courses/science/robotics\"><b>SMbly Required\n                        5805</b></a>\n            </div>\n        </div>\n        <div class=\"alert alert-warning warr\" role=\"alert\">\n            We <b>ARE NOT</b> responsible for any wrong information on this website\n            It's to help you understand SM schedule faster. You should <b>NOT</b> rely on this app\n        </div>\n    </div>\n</div>"
+module.exports = "<div class=\"tab-content\" class=\"quick-check-body\">\n    <div class=\"tab-pane fade show active width320\" id=\"Search-home\" role=\"tabpanel\" aria-labelledby=\"pills-home-tab\">\n        <span class=\"badge badge-success\" style=\"font-size: 20px;\">Quick Check</span>\n        <br>\n        <a [routerLink]=\"['/login&signup']\">\n            <span class=\"badge badge-info check\">Click HERE</span> <span class=\"badge badge-info check\">Create a free account for more features :)</span>\n        </a>\n        <div *ngIf=\"isShowTimeBar\" class=\"input-group mb-3\" style=\"margin-bottom:0!important; margin-top:10px;\">\n            <div class=\"input-group-prepend\" style='margin: 0 auto;'>\n                <label class=\"input-group-text\" for=\"inputGroupSelect01\">Start with\n                    <div *ngIf=\"isDone\" class=\"spinner-border\" style=\"width: 1rem; height: 1rem;\" role=\"status\">\n                        <span class=\"sr-only\">Loading...</span>\n                    </div>\n                    <b>&nbsp;{{luncper.startPeriod}}</b>&nbsp;at&nbsp;<b>{{luncper.startTime}}</b></label>\n            </div>\n            \n            <!--\n            <div class=\"input-group-prepend\">\n                <label class=\"input-group-text\" for=\"inputGroupSelect01\">Peroid\n                    <div *ngIf=\"isDone\" class=\"spinner-border\" style=\"width: 1rem; height: 1rem;\" role=\"status\">\n                        <span class=\"sr-only\">Loading...</span>\n                    </div>\n                    <b>-{{luncper}}-</b> building</label>\n            </div>\n            <select (change)=\"isFirstLunch($event)\" value={{room}} class=\"custom-select op\" id=\"inputGrojjupSelect01\">\n                <option value=\"\">Options</option>\n                <option value=\"B\">B</option>\n                <option value=\"Talon\">Talon</option>\n                <option value=\"C\">C</option>\n                <option value=\"S\">S</option>\n                <option value=\"G115\">G115</option>\n                <option value=\"G116\">G116</option>\n                <option value=\"G117\">G117</option>\n                <option value=\"A\">A</option>\n                <option value=\"T\">T</option>\n                <option value=\"R\">R</option>\n                <option value=\"G\">G</option>\n                <option value=\"GYM\">GYM</option>\n                <option value=\"Library\">Library</option>\n            </select>-->\n        </div>\n        <div class=\"toast\" role=\"alert\" aria-live=\"polite\" aria-atomic=\"true\" data-autohide=\"true\">\n            <div class=\"toast-header\">\n                <img src=\"https://seeyourschedule.com/logoo_5805.png\" width=\"40\" height=\"40\" class=\"rounded mr-2\"\n                    alt=\"...\">\n                <strong class=\"mr-auto\">Schedule: <b style=\"color:black;\">{{luncper.type}}</b></strong>\n                <small></small>\n                <button type=\"button\" class=\"ml-2 mb-1 close\" data-dismiss=\"toast\" aria-label=\"Close\">\n                    <span aria-hidden=\"true\">;)</span>\n                </button>\n            </div>\n            <div class=\"toast-body\">\n                Hello, eagle! FROM <a style=\"text-decoration: underline;\"\n                    href=\"https://www.smhs.org/academics/departments-and-courses/science/robotics\"><b>SMbly Required\n                        5805</b></a>\n            </div>\n        </div>\n        <div class=\"alert alert-warning warr\" role=\"alert\">\n            We <b>ARE NOT</b> responsible for any wrong information on this website\n            It's to help you understand SM schedule faster. You should <b>NOT</b> rely on this app\n        </div>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -107,7 +107,7 @@ module.exports = "<main>\n    <!--nav bar-->\n    <ul class=\"nav nav-tabs\">\n 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"isLoad && isAllPeriod\" class=\"spinner-border text-dark loader\" role=\"status\">\n    <span class=\"sr-only\">Loading...</span>\n</div>\n<div *ngIf=\"todayB && isAllPeriod\" class=\"tab-pane fade show active\" id=\"today\" role=\"tabpanel\" aria-labelledby=\"today-tab\">\n    <div class=\"alert alert-success\" role=\"alert\">\n        Today's block: <b>{{todayblockD.today}}</b>\n    </div>\n   \n    <div id=\"timeL\">\n        <div *ngFor=\"let obj of timeLines.today.timeline; index as i;\" class=\"btn-group sep b{{i}}\" role=\"group\"\n            aria-label=\"Basic example\">\n            <button type=\"button\" class=\"btn btn-primary spbtn {{obj.style}}\">{{obj.title}}</button>\n            <button type=\"button\" class=\"btn btn-warning spbtn {{obj.style}}\">{{obj.where}}</button>\n            <button type=\"button\" class=\"btn btn-dark spbtn {{obj.style}}\">{{obj.time}}</button>\n            <button type=\"button\" class=\"btn btn-success spbtn {{obj.style}}\">{{obj.timeleft}}</button>\n        </div>\n    </div>\n\n    <div class=\"toast\" role=\"alert\" aria-live=\"polite\" aria-atomic=\"true\" data-autohide=\"true\">\n        <div class=\"toast-header\">\n            <img src=\"https://seeyourschedule.com/logoo_5805.png\" width=\"40\" height=\"40\" class=\"rounded mr-2\" alt=\"...\">\n            <strong class=\"mr-auto hjhjh\">You have {{lunchOfDay}}</strong>\n            <small></small>\n            <button type=\"button\" class=\"ml-2 mb-1 close\" data-dismiss=\"toast\" aria-label=\"Close\">\n                <span aria-hidden=\"true\">;)</span>\n            </button>\n        </div>\n        <div class=\"toast-body\">\n            Hello, <b>{{display}}</b>! FROM <a style=\"text-decoration: underline;\"\n                href=\"https://www.smhs.org/academics/departments-and-courses/science/robotics\"><b>SMbly Required\n                    5805</b></a>\n        </div>\n    </div>\n\n    <div *ngIf=\"isBreak\" class=\"alert alert-info\" role=\"alert\">\n        You're at break now :)\n    </div>\n</div>\n\n<!--this week section-->\n<div *ngIf=\"!todayB && isAllPeriod\" class=\"tab-pane fade show active\" id=\"thisweek\" role=\"tabpanel\" aria-labelledby=\"direction-tab\">\n    <div class=\"form-group generalWidth\">\n        <span class=\"badge badge-pill badge-info largerFont\">Switch Week</span><span class=\"badge badge-pill badge-success largerFont\">Scroll right for more days -----> </span>\n        \n        <div class=\"input-group\">\n            <select (change)=\"switchWeek($event)\" value=\"{{currentWeek * 7}}\" class=\"form-control\" id=\"switchweekSelect\">\n                <option *ngFor=\"let weekNum of weekList\" value=\"{{7 * (weekNum - 1)}}\">Week\n                    {{weekNum}}----{{weekStartAndEnd[7 * (weekNum - 1)].start}} >>\n                    {{weekStartAndEnd[7 * (weekNum - 1)].end}}</option>\n            </select>\n            <div class=\"input-group-append\">\n                <button class=\"btn btn-outline-info\" type=\"button\" (click)=\"resetWeek()\">Reset</button>\n            </div>\n        </div>\n    </div>\n\n    <div id=\"thisweek_container\">\n        <div class=\"timeLL\">\n            <h5><span class=\"badge badge-secondary weekTi\">Mon</span>{{timeLines.monday.date}}<span\n                    class=\"badge badge-secondary weekTi\">{{todayblockD.monday}}</span>\n            </h5>\n            <div *ngFor=\"let obj of timeLines.monday.timeline; index as i;\" class=\"btn-group sep a{{i}} sep_week\"\n                role=\"group\" aria-label=\"Basic example\">\n                <button type=\"button\" class=\"btn btn-primary a{{i}}_1 spbtn\">{{obj.title}}</button>\n                <button type=\"button\" class=\"btn btn-warning spbtn a{{i}}_2\">{{obj.where}}</button>\n                <button type=\"button\" class=\"btn btn-dark spbtn a{{i}}_3\">{{obj.time}}</button>\n            </div>\n        </div>\n\n        <div class=\"timeLL\">\n            <h5><span class=\"badge badge-secondary weekTi\">Tues</span>{{timeLines.tuesday.date}}<span\n                    class=\"badge badge-secondary weekTi\">{{todayblockD.tuesday}}</span>\n            </h5>\n            <div *ngFor=\"let obj of timeLines.tuesday.timeline; index as i;\" class=\"btn-group sep a{{i}} sep_week\"\n                role=\"group\" aria-label=\"Basic example\">\n                <button type=\"button\" class=\"btn btn-primary a{{i}}_1 spbtn\">{{obj.title}}</button>\n                <button type=\"button\" class=\"btn btn-warning spbtn a{{i}}_2\">{{obj.where}}</button>\n                <button type=\"button\" class=\"btn btn-dark spbtn a{{i}}_3\">{{obj.time}}</button>\n            </div>\n        </div>\n\n        <div class=\"timeLL\">\n            <h5><span class=\"badge badge-secondary weekTi\">Wed</span>{{timeLines.wednesday.date}}<span\n                    class=\"badge badge-secondary weekTi\">{{todayblockD.wednesday}}</span>\n            </h5>\n            <div *ngFor=\"let obj of timeLines.wednesday.timeline; index as i;\" class=\"btn-group sep a{{i}} sep_week\"\n                role=\"group\" aria-label=\"Basic example\">\n                <button type=\"button\" class=\"btn btn-primary a{{i}}_1 spbtn\">{{obj.title}}</button>\n                <button type=\"button\" class=\"btn btn-warning spbtn a{{i}}_2\">{{obj.where}}</button>\n                <button type=\"button\" class=\"btn btn-dark spbtn a{{i}}_3\">{{obj.time}}</button>\n            </div>\n        </div>\n\n        <div class=\"timeLL\">\n            <h5><span class=\"badge badge-secondary weekTi\">Thurs</span>{{timeLines.thursday.date}}<span\n                    class=\"badge badge-secondary weekTi\">{{todayblockD.thursday}}</span>\n            </h5>\n            <div *ngFor=\"let obj of timeLines.thursday.timeline; index as i;\" class=\"btn-group sep a{{i}} sep_week\"\n                role=\"group\" aria-label=\"Basic example\">\n                <button type=\"button\" class=\"btn btn-primary a{{i}}_1 spbtn\">{{obj.title}}</button>\n                <button type=\"button\" class=\"btn btn-warning spbtn a{{i}}_2\">{{obj.where}}</button>\n                <button type=\"button\" class=\"btn btn-dark spbtn a{{i}}_3\">{{obj.time}}</button>\n            </div>\n        </div>\n\n        <div class=\"timeLL\">\n            <h5><span class=\"badge badge-secondary weekTi\">Fri</span>{{timeLines.friday.date}}<span\n                    class=\"badge badge-secondary weekTi\">{{todayblockD.friday}}</span>\n            </h5>\n            <div *ngFor=\"let obj of timeLines.friday.timeline; index as i;\" class=\"btn-group sep a{{i}} sep_week\"\n                role=\"group\" aria-label=\"Basic example\">\n                <button type=\"button\" class=\"btn btn-primary a{{i}}_1 spbtn\">{{obj.title}}</button>\n                <button type=\"button\" class=\"btn btn-warning spbtn a{{i}}_2\">{{obj.where}}</button>\n                <button type=\"button\" class=\"btn btn-dark spbtn a{{i}}_3\">{{obj.time}}</button>\n            </div>\n        </div>\n    </div>\n</div>"
+module.exports = "<div *ngIf=\"isLoad && isAllPeriod\" class=\"spinner-border text-dark loader\" role=\"status\">\n    <span class=\"sr-only\">Loading...</span>\n</div>\n<div *ngIf=\"todayB && isAllPeriod\" class=\"tab-pane fade show active\" id=\"today\" role=\"tabpanel\" aria-labelledby=\"today-tab\">\n    <div class=\"alert alert-success\" role=\"alert\">\n        Today's block: <b>{{todayblockD.today}}</b>\n    </div>\n   \n    <div id=\"timeL\">\n        <div *ngFor=\"let obj of timeLines.today.timeline; index as i;\" class=\"btn-group sep b{{i}}\" role=\"group\"\n            aria-label=\"Basic example\">\n            <button type=\"button\" class=\"btn btn-primary spbtn {{obj.style}}\">{{obj.title}}</button>\n            <button type=\"button\" class=\"btn btn-warning spbtn {{obj.style}}\">{{obj.where}}</button>\n            <button type=\"button\" class=\"btn btn-dark spbtn {{obj.style}}\">{{obj.time}}</button>\n            <button type=\"button\" class=\"btn btn-success spbtn {{obj.style}}\">{{obj.timeleft}}</button>\n        </div>\n    </div>\n\n    <div class=\"toast\" role=\"alert\" aria-live=\"polite\" aria-atomic=\"true\" data-autohide=\"true\">\n        <div class=\"toast-header\">\n            <img src=\"https://seeyourschedule.com/logoo_5805.png\" width=\"40\" height=\"40\" class=\"rounded mr-2\" alt=\"...\">\n            <strong class=\"mr-auto hjhjh\">Have {{lunchOfDay}}</strong>\n            <small></small>\n            <button type=\"button\" class=\"ml-2 mb-1 close\" data-dismiss=\"toast\" aria-label=\"Close\">\n                <span aria-hidden=\"true\">;)</span>\n            </button>\n        </div>\n        <div class=\"toast-body\">\n            Hello, <b>{{display}}</b>! FROM <a style=\"text-decoration: underline;\"\n                href=\"https://www.smhs.org/academics/departments-and-courses/science/robotics\"><b>SMbly Required\n                    5805</b></a>\n        </div>\n    </div>\n\n    <div *ngIf=\"isBreak\" class=\"alert alert-info\" role=\"alert\">\n        You're at break now :)\n    </div>\n</div>\n\n<!--this week section-->\n<div *ngIf=\"!todayB && isAllPeriod\" class=\"tab-pane fade show active\" id=\"thisweek\" role=\"tabpanel\" aria-labelledby=\"direction-tab\">\n    <div class=\"form-group generalWidth\">\n        <span class=\"badge badge-pill badge-info largerFont\">Switch Week</span><span class=\"badge badge-pill badge-success largerFont\">Scroll right for more days -----> </span>\n        \n        <div class=\"input-group\">\n            <select (change)=\"switchWeek($event)\" value=\"{{currentWeek * 7}}\" class=\"form-control\" id=\"switchweekSelect\">\n                <option *ngFor=\"let weekNum of weekList\" value=\"{{7 * (weekNum - 1)}}\">Week\n                    {{weekNum}}----{{weekStartAndEnd[7 * (weekNum - 1)].start}} >>\n                    {{weekStartAndEnd[7 * (weekNum - 1)].end}}</option>\n            </select>\n            <div class=\"input-group-append\">\n                <button class=\"btn btn-outline-info\" type=\"button\" (click)=\"resetWeek()\">Reset</button>\n            </div>\n        </div>\n    </div>\n\n    <div id=\"thisweek_container\">\n        <div class=\"timeLL\">\n            <h5><span class=\"badge badge-secondary weekTi\">Mon</span>{{timeLines.monday.date}}<span\n                    class=\"badge badge-secondary weekTi\">{{todayblockD.monday}}</span>\n            </h5>\n            <div *ngFor=\"let obj of timeLines.monday.timeline; index as i;\" class=\"btn-group sep a{{i}} sep_week\"\n                role=\"group\" aria-label=\"Basic example\">\n                <button type=\"button\" class=\"btn btn-primary a{{i}}_1 spbtn\">{{obj.title}}</button>\n                <button type=\"button\" class=\"btn btn-warning spbtn a{{i}}_2\">{{obj.where}}</button>\n                <button type=\"button\" class=\"btn btn-dark spbtn a{{i}}_3\">{{obj.time}}</button>\n            </div>\n        </div>\n\n        <div class=\"timeLL\">\n            <h5><span class=\"badge badge-secondary weekTi\">Tues</span>{{timeLines.tuesday.date}}<span\n                    class=\"badge badge-secondary weekTi\">{{todayblockD.tuesday}}</span>\n            </h5>\n            <div *ngFor=\"let obj of timeLines.tuesday.timeline; index as i;\" class=\"btn-group sep a{{i}} sep_week\"\n                role=\"group\" aria-label=\"Basic example\">\n                <button type=\"button\" class=\"btn btn-primary a{{i}}_1 spbtn\">{{obj.title}}</button>\n                <button type=\"button\" class=\"btn btn-warning spbtn a{{i}}_2\">{{obj.where}}</button>\n                <button type=\"button\" class=\"btn btn-dark spbtn a{{i}}_3\">{{obj.time}}</button>\n            </div>\n        </div>\n\n        <div class=\"timeLL\">\n            <h5><span class=\"badge badge-secondary weekTi\">Wed</span>{{timeLines.wednesday.date}}<span\n                    class=\"badge badge-secondary weekTi\">{{todayblockD.wednesday}}</span>\n            </h5>\n            <div *ngFor=\"let obj of timeLines.wednesday.timeline; index as i;\" class=\"btn-group sep a{{i}} sep_week\"\n                role=\"group\" aria-label=\"Basic example\">\n                <button type=\"button\" class=\"btn btn-primary a{{i}}_1 spbtn\">{{obj.title}}</button>\n                <button type=\"button\" class=\"btn btn-warning spbtn a{{i}}_2\">{{obj.where}}</button>\n                <button type=\"button\" class=\"btn btn-dark spbtn a{{i}}_3\">{{obj.time}}</button>\n            </div>\n        </div>\n\n        <div class=\"timeLL\">\n            <h5><span class=\"badge badge-secondary weekTi\">Thurs</span>{{timeLines.thursday.date}}<span\n                    class=\"badge badge-secondary weekTi\">{{todayblockD.thursday}}</span>\n            </h5>\n            <div *ngFor=\"let obj of timeLines.thursday.timeline; index as i;\" class=\"btn-group sep a{{i}} sep_week\"\n                role=\"group\" aria-label=\"Basic example\">\n                <button type=\"button\" class=\"btn btn-primary a{{i}}_1 spbtn\">{{obj.title}}</button>\n                <button type=\"button\" class=\"btn btn-warning spbtn a{{i}}_2\">{{obj.where}}</button>\n                <button type=\"button\" class=\"btn btn-dark spbtn a{{i}}_3\">{{obj.time}}</button>\n            </div>\n        </div>\n\n        <div class=\"timeLL\">\n            <h5><span class=\"badge badge-secondary weekTi\">Fri</span>{{timeLines.friday.date}}<span\n                    class=\"badge badge-secondary weekTi\">{{todayblockD.friday}}</span>\n            </h5>\n            <div *ngFor=\"let obj of timeLines.friday.timeline; index as i;\" class=\"btn-group sep a{{i}} sep_week\"\n                role=\"group\" aria-label=\"Basic example\">\n                <button type=\"button\" class=\"btn btn-primary a{{i}}_1 spbtn\">{{obj.title}}</button>\n                <button type=\"button\" class=\"btn btn-warning spbtn a{{i}}_2\">{{obj.where}}</button>\n                <button type=\"button\" class=\"btn btn-dark spbtn a{{i}}_3\">{{obj.time}}</button>\n            </div>\n        </div>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -236,10 +236,31 @@ let AppComponent = class AppComponent {
         this.displayNom = "";
     }
     ngOnInit() {
-        this.auth.getSche("non").subscribe(data => {
-            this.datelist = data.scheArray;
-            this.load = false;
+        this.auth.getScheVersion("non").subscribe(data2 => {
+            if (localStorage.getItem("smlunch.ga_scheVersion") != data2.version) {
+                localStorage.setItem("smlunch.ga_scheVersion", data2.version);
+                this.auth.getSche("non").subscribe(data => {
+                    localStorage.setItem("smlunch.ga_sche", JSON.stringify(data));
+                    this.datelist = data.scheArray;
+                    this.load = false;
+                });
+            }
+            else {
+                let data = JSON.parse(localStorage.getItem('smlunch.ga_sche'));
+                this.datelist = data.scheArray;
+                this.load = false;
+            }
         });
+        /*
+        this.auth.getSche("non").subscribe(data => {
+          this.datelist = data.scheArray;
+          this.load = false;
+          
+          update scheArray
+          let newssss = JSON.stringify(this.datelist).replaceAll('2020', '2021');
+          newssss = newssss.replaceAll('2019', '2020');
+          console.log(newssss);
+        });*/
         setInterval(() => {
             this.hexClock();
             if (this.displayNom != this.monnum) {
@@ -691,6 +712,12 @@ let QuickCheckComponent = class QuickCheckComponent {
         this.auth = auth;
         this.cookie = cookie;
         this.dataTransfer = dataTransfer;
+        this.luncper = {
+            startPeriod: '',
+            startTime: '',
+            type: 'DAY OFF'
+        };
+        this.isDone = false;
         this.blocktypes = {
             R: `Regular`,
             S: `Single Block Mtg`,
@@ -715,7 +742,10 @@ let QuickCheckComponent = class QuickCheckComponent {
             ExO: 'Exam',
             Online: `Online Instruction Periods`,
             OnlineOffice: `Online Instruction Periods`,
-            OnlineAll: `Online Instruction Periods`
+            OnlineAll: `Online Instruction Periods`,
+            LAR: 'Late Academic Regular',
+            LAM: 'Late Academic Meeting',
+            Mt: 'Meeting'
         };
         this.isAAuto = true;
         this.isDateChange = false;
@@ -760,8 +790,9 @@ let QuickCheckComponent = class QuickCheckComponent {
         }, 1000);
     }
     getSche() {
-        this.isDone = true;
-        this.auth.getSche("non").subscribe(data => {
+        try {
+            //this.auth.getSche("non").subscribe(data => {
+            let data = JSON.parse(localStorage.getItem('smlunch.ga_sche'));
             if (this.isAAuto) {
                 this.date = document.querySelector("#monnum").innerText;
             }
@@ -771,115 +802,54 @@ let QuickCheckComponent = class QuickCheckComponent {
             //for testing
             //this.date = "2019-9-11"
             this.todayblock = data.block[this.date];
-            if (this.todayblock != undefined) {
-                this.isGotDate = true;
-                if (this.isNumeric(this.todayblock[this.todayblock.length - 1])) {
-                    var schestr = this.todayblock.substring(0, this.todayblock.length - 1);
-                    var num = this.todayblock[this.todayblock.length - 1];
-                    this.todayblockD = this.blocktypes[schestr] + num;
-                    this.todaytimes = data.sche[this.todayblock.substring(0, this.todayblock.length - 1)];
-                    if (this.todaytimes != undefined) {
-                        this.updateBANDP(Number(num), schestr);
-                        this.luncper = " " + this.blockAndTime[Number(this.todaytimes['First Lunch'].split('/')[1][6]) - 1][1] + " ";
+            if (this.todayblock == undefined || this.todayblock == 'Off') {
+                this.luncper = {
+                    startPeriod: '',
+                    startTime: '',
+                    type: 'DAY OFF'
+                };
+                this.isShowTimeBar = false;
+            }
+            else {
+                let type = this.todayblock.substring(0, this.todayblock.length - 1);
+                let timeLL = data.sche[type];
+                let period = this.todayblock[this.todayblock.length - 1];
+                let periodCopy = period;
+                let start = '8:00';
+                let firstClass = Object.keys(timeLL)[0];
+                if (firstClass == 'Meeting') {
+                    start = '9:00';
+                    if (Object.keys(timeLL)[1].includes('Block')) {
+                        period = 'period ' + period;
                     }
                     else {
-                        this.isDone = false;
-                        this.luncper = "No";
+                        period = Object.keys(timeLL)[1];
                     }
                 }
                 else {
-                    this.todayblockD = this.blocktypes[this.todayblock];
-                    this.todaytimes = data.sche[this.todayblock];
-                    if (this.todaytimes != undefined) {
-                        this.updateBANDP(-1, "S");
-                        this.luncper = " " + this.blockAndTime[Number(this.todaytimes['First Lunch'].split('/')[1][6]) - 1][1] + " ";
+                    if (firstClass.includes('Block')) {
+                        period = 'period ' + period;
                     }
                     else {
-                        this.isDone = false;
-                        this.luncper = "No";
+                        period = firstClass;
                     }
+                    let fff = timeLL[firstClass];
+                    start = fff.split('-')[0];
                 }
+                if (type.includes('Sp')) {
+                    type = 'Sp';
+                }
+                type = this.blocktypes[type];
+                this.luncper = {
+                    startPeriod: period,
+                    startTime: start,
+                    type: type + periodCopy
+                };
+                this.isShowTimeBar = true;
             }
-            else {
-                if (this.date.length == 0) {
-                    this.isGotDate = false;
-                }
-                else {
-                    this.isGotDate = true;
-                    this.luncper = "No";
-                }
-            }
-            this.isDone = false;
-        });
-    }
-    updateBANDP(c = -1, sche) {
-        this.blockAndTime = [];
-        if (c == -1) {
+            //});
         }
-        else {
-            if (sche === 'All' || sche === '0812Sp' || sche === 'Rec' || sche === 'TA' || sche === 'OfficeAll') {
-                for (var i = c; i < c + 7; i++) {
-                    if (i <= 7) {
-                        this.blockAndTime.push("p" + i);
-                    }
-                    else {
-                        this.blockAndTime.push("p" + (i - 7));
-                    }
-                }
-            }
-            else if (sche == "Mn" || sche == "Ms") {
-                for (var i = c; i < c + 4; i++) {
-                    if (i <= 7) {
-                        this.blockAndTime.push("p" + i);
-                    }
-                    else {
-                        this.blockAndTime.push("p" + (i - 7));
-                    }
-                }
-            }
-            else if (sche == "S") {
-                this.blockAndTime.push("meeting");
-                for (var i = c; i < c + 5; i++) {
-                    if (i <= 7) {
-                        this.blockAndTime.push("p" + i);
-                    }
-                    else {
-                        this.blockAndTime.push("p" + (i - 7));
-                    }
-                }
-            }
-            else {
-                for (var i = c; i < c + 6; i++) {
-                    if (i <= 7) {
-                        this.blockAndTime.push("p" + i);
-                    }
-                    else {
-                        this.blockAndTime.push("p" + (i - 7));
-                    }
-                }
-            }
-            this.blockAndTime.push("p8");
-        }
-    }
-    isNumeric(n) {
-        return !isNaN(parseFloat(n)) && isFinite(n);
-    }
-    isModifiedSchedule(todayBlock) {
-        return todayBlock.includes("TM") || todayBlock.includes("TA") || todayBlock.includes("TR") || todayBlock.includes("1115SpE6") || todayBlock.includes("1122SpE5");
-    }
-    isFirstLunch(e) {
-        e.preventDefault();
-        this.room = e.target.value;
-        this.cookie.set("tem_smlunch", this.room);
-        if (this.room == 'B' || this.room == 'C' || this.room == 'S' || this.room == 'G115' || this.room == 'G116'
-            || this.room == 'G117' || this.room == 'Talon' || this.isModifiedSchedule(this.todayblock)) {
-            this.lunchOfDay = "First Lunch";
-        }
-        else if (this.room == '') {
-            this.lunchOfDay = "1st or 2nd lunch";
-        }
-        else {
-            this.lunchOfDay = "Second Lunch";
+        catch (_a) {
         }
     }
 };
@@ -1586,7 +1556,10 @@ let YourScheduleComponent = class YourScheduleComponent {
             ExO: 'Exam',
             Online: `Online Instruction Periods`,
             OnlineOffice: `Online Instruction Periods`,
-            OnlineAll: `Online Instruction Periods`
+            OnlineAll: `Online Instruction Periods`,
+            LAR: 'Late Academic Regular',
+            LAM: 'Late Academic Meeting',
+            Mt: 'Meeting'
         };
         this.isAllPeriod = true;
         this.time_line = []; //the time line of the day(used in HTML as ngFor) NOT_USED
@@ -1648,7 +1621,8 @@ let YourScheduleComponent = class YourScheduleComponent {
         this.notificationOffPeriof = 0; //system can send notification if this value is zero
         this.datePairWithNumber = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'];
         this.weekList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42];
-        this.weekStartAndEnd = { '0': { 'start': '2019-8-12', 'end': '2019-8-16' }, '7': { 'start': '2019-8-19', 'end': '2019-8-23' }, '14': { 'start': '2019-8-26', 'end': '2019-8-30' }, '21': { 'start': '2019-9-2', 'end': '2019-9-6' }, '28': { 'start': '2019-9-9', 'end': '2019-9-13' }, '35': { 'start': '2019-9-16', 'end': '2019-9-20' }, '42': { 'start': '2019-9-23', 'end': '2019-9-27' }, '49': { 'start': '2019-9-30', 'end': '2019-10-4' }, '56': { 'start': '2019-10-7', 'end': '2019-10-11' }, '63': { 'start': '2019-10-14', 'end': '2019-10-18' }, '70': { 'start': '2019-10-21', 'end': '2019-10-25' }, '77': { 'start': '2019-10-28', 'end': '2019-11-1' }, '84': { 'start': '2019-11-4', 'end': '2019-11-8' }, '91': { 'start': '2019-11-11', 'end': '2019-11-15' }, '98': { 'start': '2019-11-18', 'end': '2019-11-22' }, '105': { 'start': '2019-11-25', 'end': '2019-11-29' }, '112': { 'start': '2019-12-2', 'end': '2019-12-6' }, '119': { 'start': '2019-12-9', 'end': '2019-12-13' }, '126': { 'start': '2019-12-16', 'end': '2019-12-20' }, '133': { 'start': '2019-12-23', 'end': '2019-12-27' }, '140': { 'start': '2019-12-30', 'end': '2020-1-3' }, '147': { 'start': '2020-1-6', 'end': '2020-1-10' }, '154': { 'start': '2020-1-13', 'end': '2020-1-17' }, '161': { 'start': '2020-1-20', 'end': '2020-1-24' }, '168': { 'start': '2020-1-27', 'end': '2020-1-31' }, '175': { 'start': '2020-2-3', 'end': '2020-2-7' }, '182': { 'start': '2020-2-10', 'end': '2020-2-14' }, '189': { 'start': '2020-2-17', 'end': '2020-2-21' }, '196': { 'start': '2020-2-24', 'end': '2020-2-28' }, '203': { 'start': '2020-3-2', 'end': '2020-3-6' }, '210': { 'start': '2020-3-9', 'end': '2020-3-13' }, '217': { 'start': '2020-3-16', 'end': '2020-3-20' }, '224': { 'start': '2020-3-23', 'end': '2020-3-27' }, '231': { 'start': '2020-3-30', 'end': '2020-4-3' }, '238': { 'start': '2020-4-6', 'end': '2020-4-10' }, '245': { 'start': '2020-4-13', 'end': '2020-4-17' }, '252': { 'start': '2020-4-20', 'end': '2020-4-24' }, '259': { 'start': '2020-4-27', 'end': '2020-5-1' }, '266': { 'start': '2020-5-4', 'end': '2020-5-8' }, '273': { 'start': '2020-5-11', 'end': '2020-5-15' }, '280': { 'start': '2020-5-18', 'end': '2020-5-22' }, '287': { 'start': '2020-5-25', 'end': '2020-5-28' }, '294': { 'start': '2019-8-12', 'end': '2019-8-16' } };
+        //private weekStartAndEnd2019-2020 = { '0': { 'start': '2020-8-12', 'end': '2019-8-16' }, '7': { 'start': '2019-8-19', 'end': '2019-8-23' }, '14': { 'start': '2019-8-26', 'end': '2019-8-30' }, '21': { 'start': '2019-9-2', 'end': '2019-9-6' }, '28': { 'start': '2019-9-9', 'end': '2019-9-13' }, '35': { 'start': '2019-9-16', 'end': '2019-9-20' }, '42': { 'start': '2019-9-23', 'end': '2019-9-27' }, '49': { 'start': '2019-9-30', 'end': '2019-10-4' }, '56': { 'start': '2019-10-7', 'end': '2019-10-11' }, '63': { 'start': '2019-10-14', 'end': '2019-10-18' }, '70': { 'start': '2019-10-21', 'end': '2019-10-25' }, '77': { 'start': '2019-10-28', 'end': '2019-11-1' }, '84': { 'start': '2019-11-4', 'end': '2019-11-8' }, '91': { 'start': '2019-11-11', 'end': '2019-11-15' }, '98': { 'start': '2019-11-18', 'end': '2019-11-22' }, '105': { 'start': '2019-11-25', 'end': '2019-11-29' }, '112': { 'start': '2019-12-2', 'end': '2019-12-6' }, '119': { 'start': '2019-12-9', 'end': '2019-12-13' }, '126': { 'start': '2019-12-16', 'end': '2019-12-20' }, '133': { 'start': '2019-12-23', 'end': '2019-12-27' }, '140': { 'start': '2019-12-30', 'end': '2020-1-3' }, '147': { 'start': '2020-1-6', 'end': '2020-1-10' }, '154': { 'start': '2020-1-13', 'end': '2020-1-17' }, '161': { 'start': '2020-1-20', 'end': '2020-1-24' }, '168': { 'start': '2020-1-27', 'end': '2020-1-31' }, '175': { 'start': '2020-2-3', 'end': '2020-2-7' }, '182': { 'start': '2020-2-10', 'end': '2020-2-14' }, '189': { 'start': '2020-2-17', 'end': '2020-2-21' }, '196': { 'start': '2020-2-24', 'end': '2020-2-28' }, '203': { 'start': '2020-3-2', 'end': '2020-3-6' }, '210': { 'start': '2020-3-9', 'end': '2020-3-13' }, '217': { 'start': '2020-3-16', 'end': '2020-3-20' }, '224': { 'start': '2020-3-23', 'end': '2020-3-27' }, '231': { 'start': '2020-3-30', 'end': '2020-4-3' }, '238': { 'start': '2020-4-6', 'end': '2020-4-10' }, '245': { 'start': '2020-4-13', 'end': '2020-4-17' }, '252': { 'start': '2020-4-20', 'end': '2020-4-24' }, '259': { 'start': '2020-4-27', 'end': '2020-5-1' }, '266': { 'start': '2020-5-4', 'end': '2020-5-8' }, '273': { 'start': '2020-5-11', 'end': '2020-5-15' }, '280': { 'start': '2020-5-18', 'end': '2020-5-22' }, '287': { 'start': '2020-5-25', 'end': '2020-5-28' }, '294': { 'start': '2019-8-12', 'end': '2019-8-16' } };
+        this.weekStartAndEnd = { "0": { "start": "2020-8-10", "end": "2020-8-14" }, "7": { "start": "2020-8-17", "end": "2020-8-21" }, "14": { "start": "2020-8-24", "end": "2020-8-28" }, "21": { "start": "2020-8-31", "end": "2020-9-4" }, "28": { "start": "2020-9-7", "end": "2020-9-11" }, "35": { "start": "2020-9-14", "end": "2020-9-18" }, "42": { "start": "2020-9-21", "end": "2020-9-25" }, "49": { "start": "2020-9-28", "end": "2020-10-2" }, "56": { "start": "2020-10-5", "end": "2020-10-9" }, "63": { "start": "2020-10-12", "end": "2020-10-16" }, "70": { "start": "2020-10-19", "end": "2020-10-23" }, "77": { "start": "2020-10-26", "end": "2020-10-30" }, "84": { "start": "2020-11-2", "end": "2020-11-6" }, "91": { "start": "2020-11-9", "end": "2020-11-13" }, "98": { "start": "2020-11-16", "end": "2020-11-20" }, "105": { "start": "2020-11-23", "end": "2020-11-27" }, "112": { "start": "2020-11-30", "end": "2020-12-4" }, "119": { "start": "2020-12-7", "end": "2020-12-11" }, "126": { "start": "2020-12-14", "end": "2020-12-18" }, "133": { "start": "2020-12-21", "end": "2020-12-25" }, "140": { "start": "2020-12-28", "end": "2021-1-1" }, "147": { "start": "2021-1-4", "end": "2021-1-8" }, "154": { "start": "2021-1-11", "end": "2021-1-15" }, "161": { "start": "2021-1-18", "end": "2021-1-22" }, "168": { "start": "2021-1-25", "end": "2021-1-29" }, "175": { "start": "2021-2-1", "end": "2021-2-5" }, "182": { "start": "2021-2-8", "end": "2021-2-12" }, "189": { "start": "2021-2-15", "end": "2021-2-19" }, "196": { "start": "2021-2-22", "end": "2021-2-26" }, "203": { "start": "2021-2-29", "end": "2021-3-4" }, "210": { "start": "2021-3-7", "end": "2021-3-11" }, "217": { "start": "2021-3-14", "end": "2021-3-18" }, "224": { "start": "2021-3-21", "end": "2021-3-25" }, "231": { "start": "2021-3-28", "end": "2021-4-1" }, "238": { "start": "2021-4-4", "end": "2021-4-8" }, "245": { "start": "2021-4-11", "end": "2021-4-15" }, "252": { "start": "2021-4-18", "end": "2021-4-22" }, "259": { "start": "2021-4-25", "end": "2021-4-29" }, "266": { "start": "2021-5-2", "end": "2021-5-6" }, "273": { "start": "2021-5-9", "end": "2021-5-13" }, "280": { "start": "2021-5-16", "end": "2021-5-20" }, "287": { "start": "2021-5-23", "end": "2021-5-28" } };
         this.todayB = true;
         this.handleWindow();
     }
@@ -1760,6 +1734,7 @@ let YourScheduleComponent = class YourScheduleComponent {
             out += '"' + num + '":{ "start": "' + list[0] + '", "end" : "' + list[list.length - 1] + '"},';
         });
         out += '}';
+        console.log(out);
     }
     //get date for the week
     getDateList(todayDate) {
@@ -1800,25 +1775,28 @@ let YourScheduleComponent = class YourScheduleComponent {
     }
     //update the time left for the current period
     updateTimeLeft() {
-        if (!this.todayB) {
-            return;
-        }
-        let count = 0;
-        if (this.time !== undefined) {
-            let numnow = Number(this.time.split(' : ')[0] + this.time.split(' : ')[1]);
-            try {
-                for (let ele in this.timeLines.today.timeline) {
-                    let diff = this.isInRange(this.timeLines.today.timeline[ele].time, numnow);
-                    if (diff !== '' || !this.isAAuto) {
-                        count++;
-                        if (this.isAAuto) {
-                            if (this.todayblockD.today === 'Off') {
-                                this.timeLines.today.timeline[ele].timeleft = 'today';
-                                this.timeLines.today.timeline[ele].style = '';
+        if (this.todayB) {
+            let count = 0;
+            if (this.time !== undefined) {
+                let numnow = Number(this.time.split(' : ')[0] + this.time.split(' : ')[1]);
+                try {
+                    for (let ele in this.timeLines.today.timeline) {
+                        let diff = this.isInRange(this.timeLines.today.timeline[ele].time, numnow);
+                        if (diff !== '' || !this.isAAuto) {
+                            count++;
+                            if (this.isAAuto) {
+                                if (this.todayblockD.today === 'Off') {
+                                    this.timeLines.today.timeline[ele].timeleft = 'today';
+                                    this.timeLines.today.timeline[ele].style = '';
+                                }
+                                else {
+                                    this.timeLines.today.timeline[ele].style = '';
+                                    this.timeLines.today.timeline[ele].timeleft = diff;
+                                }
                             }
                             else {
-                                this.timeLines.today.timeline[ele].style = '';
-                                this.timeLines.today.timeline[ele].timeleft = diff;
+                                this.timeLines.today.timeline[ele].style = 'beGray';
+                                this.timeLines.today.timeline[ele].timeleft = '';
                             }
                         }
                         else {
@@ -1826,21 +1804,17 @@ let YourScheduleComponent = class YourScheduleComponent {
                             this.timeLines.today.timeline[ele].timeleft = '';
                         }
                     }
+                    if (count === 0 || this.todayblockD.today === 'Off') {
+                        this.isBreak = true;
+                    }
                     else {
-                        this.timeLines.today.timeline[ele].style = 'beGray';
-                        this.timeLines.today.timeline[ele].timeleft = '';
+                        this.isBreak = false;
                     }
                 }
-                if (count === 0 || this.todayblockD.today === 'Off') {
+                catch (err) {
+                    //console.log(err);
                     this.isBreak = true;
                 }
-                else {
-                    this.isBreak = false;
-                }
-            }
-            catch (err) {
-                //console.log(err);
-                this.isBreak = true;
             }
         }
     }
@@ -1874,7 +1848,7 @@ let YourScheduleComponent = class YourScheduleComponent {
     updateBANDP(sche, c = -1) {
         this.blockAndTime = [];
         if (c !== -1) {
-            if (sche === 'All' || sche === '0812Sp' || sche === 'Rec' || sche === 'TA' || sche === 'OfficeAll') {
+            if (sche === 'All' || sche === '0812Sp' || sche === 'Rec' || sche === 'TA' || sche === 'OnlineAll') {
                 for (var i = c; i < c + 7; i++) {
                     if (i <= 7) {
                         this.blockAndTime.push('p' + i);
@@ -1963,7 +1937,7 @@ let YourScheduleComponent = class YourScheduleComponent {
                     });
                 }
             }
-            else if (key.includes('Period') && !key.includes('Academic')) {
+            else if (key.includes('Period') && !key.includes('Academic') && !key.includes('Distribution')) {
                 this.timeLines[result_timeLineDay].timeline.push({
                     title: 'p8',
                     where: this.sche['p8'],
@@ -2031,7 +2005,7 @@ let YourScheduleComponent = class YourScheduleComponent {
                     });
                 }
             }
-            else if (key.includes('Period') && !key.includes('Academic')) {
+            else if (key.includes('Period') && !key.includes('Academic') && !key.includes('Distribution')) {
                 this.timeLines[result_timeLineDay].timeline.push({
                     title: 'p8',
                     where: this.sche['p8'],
@@ -2066,7 +2040,7 @@ let YourScheduleComponent = class YourScheduleComponent {
                     timeleft: ''
                 });
             }
-            else if (key.includes('Period') && !key.includes('Academic')) {
+            else if (key.includes('Period') && !key.includes('Academic') && !key.includes('Distribution')) {
                 this.timeLines[result_timeLineDay].timeline.push({
                     title: 'p8',
                     where: this.sche['p8'],
@@ -2098,12 +2072,10 @@ let YourScheduleComponent = class YourScheduleComponent {
                     || room === 'G117' || room === 'Talon' || this.isModifiedSchedule(this.todayblock)) {
                     this.updateTimelineF(rawBlock, this.blockAndTime, day);
                     this.lunchOfDay = 'First Lunch';
-                    return true;
                 }
                 else {
                     this.lunchOfDay = 'Second Lunch';
                     this.updateTimelineS(rawBlock, this.blockAndTime, day);
-                    return false;
                 }
             }
             else {
@@ -2128,6 +2100,7 @@ let YourScheduleComponent = class YourScheduleComponent {
                 let data = JSON.parse(localStorage.getItem('smlunch.ga_sche'));
                 let day = document.querySelector('#date').innerText;
                 this.rawDateList = data.scheArray;
+                //this.getWeekStartAndEnd();
                 //check if we are on the auto mode
                 if (this.isAAuto) {
                     this.date = document.querySelector('#monnum').innerText;
@@ -2384,7 +2357,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/robingan7/Desktop/Programming/Website Project/seeyourschedule.com/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/robingan7/Desktop/CS/Website Project/seeyourschedule.com2020-2021/src/main.ts */"./src/main.ts");
 
 
 /***/ })
